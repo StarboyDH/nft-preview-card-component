@@ -1,0 +1,117 @@
+:root {
+    --fnt: 'Outfit', sans-serif;  /* Weights: 300, 400, 600 */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fnt);
+}
+
+body {
+    display: grid;
+    place-items: center;
+    background: #0D1A2D;
+}
+
+main {
+    margin: 1em;
+    background: #15273F;
+    border-radius: 20px;
+}
+
+@media screen and (min-width: 1024px) {
+    main {
+        margin: 5% 0;
+        width: 30%;
+    }
+}
+
+.image-container {
+    width: 90%;
+    margin: 1rem auto;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+.nft-image {
+    max-width: 100%;
+}
+
+.img-hover-bg {
+    width: 100%;
+    margin-bottom: -100%;
+    aspect-ratio: 1;
+    position: relative;
+    transform: translateY(-100%);
+    display: none;
+    place-items: center;
+    background-color: rgba(0, 241, 240, .38);
+}
+
+.image-container:hover > .img-hover-bg {
+    display: grid;
+}
+
+.nft-title {
+    padding: .5rem 1.2rem;
+    font-size: 1.4em;
+    color: #FCFFFF;
+    transition: .2s ease-in-out;
+}
+
+.nft-describe {
+    padding: .5rem 1.2rem;
+    color: #91AAC9;
+}
+
+.nft-details {
+    padding: 1em 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+}
+
+.price-box, .date-box {
+    display: inherit;
+}
+
+.ethereum-icon, .date-icon {
+    margin-right: .25em;
+}
+
+.nft-price {
+    color: #00F1F0;
+}
+
+.nft-date {
+    color: #607797;
+}
+
+.creator {
+    padding: 1rem 1.2rem;
+    display: flex;
+    justify-content: safe;
+    align-items: center;
+}
+
+.avatar {
+    max-width: 12%;
+}
+
+.creation-by {
+    margin: 0 .8rem;
+    color: #748DAC;
+}
+
+.name {
+    color: #FCFFFF;
+    transition: .2s ease-in-out;
+}
+
+.nft-title:hover, .name:hover {
+    color: #00F1F0;
+    cursor: pointer;
+}
